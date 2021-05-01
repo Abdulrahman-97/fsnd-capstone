@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "73ede9af-21ee-43d4-ada8-7f1a02948e66",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Actors",
+			"item": [
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://as-capstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"as-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leonardo DiCaprio\",\r\n    \"age\": 46,\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://as-capstone.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"as-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leonardo Dicaprio\",\r\n    \"age\": 47,\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://as-capstone.herokuapp.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"as-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://as-capstone.herokuapp.com/actors/2",
+							"protocol": "https",
+							"host": [
+								"as-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlBoMVdYNFMwbXRlWHZLbWY4d3ZBVSJ9.eyJpc3MiOiJodHRwczovL2ZzbmQ1LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDcxOThmNjc0OTNkYzAwNmJjMTM0NmYiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNjE5ODcwOTM0LCJleHAiOjE2MTk5NTczMzQsImF6cCI6IlFRMjJmS3FTY2x0cGlyQ0ZUb3VQOER0YTU0QlliS1N0Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.PHRx28rUgXY_9znbyDx-G7ZApwrh-353RC4x2mtFD9CUpic4aCQUSBUV8ebcY5fr-QVyP2AKnZCR2Eny-TeLyNkMM0nX_QsElpbDBRqf7GXHl5DjgUA3Gan4_1vqGUyNsOffNAe4-tqIZeJr4kbB2guBKUsnkL0IZbyLOgdT2iptLyyszj-rMYDlCCnGF4XxKT23-7L7V2z2eMrXEd-xsiNZQv6YAa6d_U3FOC9fnQrG27f2kiOHXF7MkfryTLuP46a6SC8verqXI8knHWQTQqqMwRAtcskibRpwZG5XpIgdVqixv-hCxSEBJi3FvswXSR0YKmhJbICxVLVKGEohaA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://as-capstone.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"as-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var current_time = new Date();\r",
+									"postman.setEnvironmentVariable(\"current_time\", current_time.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"movie1\",\r\n    \"release_date\": \"{{current_time}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/movies",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var current_time = new Date();\r",
+									"postman.setEnvironmentVariable(\"current_time\", current_time.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Inception\",\r\n    \"release_date\": \"{{current_time}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/movies/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://as-capstone.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"as-capstone",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlBoMVdYNFMwbXRlWHZLbWY4d3ZBVSJ9.eyJpc3MiOiJodHRwczovL2ZzbmQ1LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MDcxOThmNjc0OTNkYzAwNmJjMTM0NmYiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNjE5ODcwOTM0LCJleHAiOjE2MTk5NTczMzQsImF6cCI6IlFRMjJmS3FTY2x0cGlyQ0ZUb3VQOER0YTU0QlliS1N0Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.PHRx28rUgXY_9znbyDx-G7ZApwrh-353RC4x2mtFD9CUpic4aCQUSBUV8ebcY5fr-QVyP2AKnZCR2Eny-TeLyNkMM0nX_QsElpbDBRqf7GXHl5DjgUA3Gan4_1vqGUyNsOffNAe4-tqIZeJr4kbB2guBKUsnkL0IZbyLOgdT2iptLyyszj-rMYDlCCnGF4XxKT23-7L7V2z2eMrXEd-xsiNZQv6YAa6d_U3FOC9fnQrG27f2kiOHXF7MkfryTLuP46a6SC8verqXI8knHWQTQqqMwRAtcskibRpwZG5XpIgdVqixv-hCxSEBJi3FvswXSR0YKmhJbICxVLVKGEohaA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
