@@ -6,7 +6,7 @@ from models import db, Movie, Actor
 from flask_migrate import Migrate
 from auth.auth import AuthError, requires_auth
 
-def app(test_config=None):
+def create_app(test_config=None):
   # create and configure the app
   app = Flask(__name__)
   app.config.from_object('config')
@@ -172,7 +172,7 @@ def app(test_config=None):
 
   return app
 
-APP = app()
+APP = create_app()
 
 if __name__ == '__main__':
     APP.run(host='0.0.0.0', port=8080, debug=True)
